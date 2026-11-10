@@ -4,91 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0B0F19" />
-  <link rel="icon" type="image/png" href="assets/avatar.png" />
+  <title>tiduloop</title>
+  <link rel="icon" type="image/jpeg" href="assets/avatar.jpeg" />
   <link rel="stylesheet" href="style.css" />
-  <title>tiduloop — Research & Chinese Character Topology</title>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="assets/avatar.png" alt="tiduloop mascot" class="avatar" />
-      <div class="profile-info">
-        <h1>tiduloop</h1>
-        <p>Independent research in computational linguistics, character topology & machine learning.</p>
-        <div class="links">
-          <a href="https://github.com/tiduloop" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="#projects">Projects</a>
-          <a href="#notes">Notes</a>
-        </div>
+  <div class="wrap">
+    <header class="header">
+      <img src="assets/avatar.jpeg" alt="tiduloop avatar" class="avatar" />
+      <div>
+        <h1 class="name">tiduloop</h1>
+        <p class="tagline">Independent research & Chinese character topology</p>
       </div>
     </header>
 
-    <main>
-      <section id="projects">
-        <h2>Active Projects</h2>
-        <div class="card-grid">
-          <a href="./hanzi-topology/" class="card">
-            <div class="card-header">
-              <span class="card-title">HanziTopology (汉字拓扑)</span>
-              <span class="card-badge">Live Tool</span>
-            </div>
-            <p class="card-desc">
-              Component topology, phonetic harmonics & vector stroke diff engine for Mandarin characters and words. Explores character graphs via radical swaps, sound carriers, and commuting diamond lattices.
-            </p>
-            <div class="card-tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">WebGL</span>
-              <span class="tag">Topology</span>
-              <span class="tag">CJKVI IDS</span>
-            </div>
-          </a>
-        </div>
-      </section>
+    <section class="section">
+      <p class="intro">
+        Exploring computational linguistics, Chinese character graphs, and independent machine learning research.
+      </p>
+    </section>
 
-      <section id="sandbox">
-        <h2>Component Breakdown Preview</h2>
-        <div class="interactive-box">
-          <div class="input-row">
-            <input type="text" id="char-input" maxlength="1" value="清" placeholder="Type a Chinese character (e.g. 清, 想, 照)..." />
-            <button id="lookup-btn">Inspect</button>
-          </div>
-          <div class="result-area" id="result-box">
-            <div class="glyph-large" id="glyph-display">清</div>
-            <div class="glyph-details" id="glyph-info">
-              <p><strong>Pinyin:</strong> <span id="pinyin-display">qīng</span></p>
-              <p><strong>Decomposition:</strong> <span id="decomp-display">⿰ 氵 青 (Water radical + phonetic carrier 青)</span></p>
-              <p><strong>Topology Role:</strong> <span id="role-display">Phono-semantic compound (形声字)</span></p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+      <ul class="items">
+        <li>
+          <a href="./hanzi-topology/" class="item-title">HanziTopology (汉字拓扑)</a>
+          <p class="item-desc">
+            Component topology, phonetic harmonics & vector stroke diff engine for Mandarin characters and words.
+          </p>
+        </li>
+      </ul>
+    </section>
 
-      <section id="notes">
-        <h2>Research & Notes</h2>
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-header">
-              <span class="card-title">Representing Ideographic Graphs</span>
-              <span class="card-badge" style="background: rgba(168, 85, 247, 0.12); color: var(--accent-violet); border-color: rgba(168, 85, 247, 0.25);">Upcoming</span>
-            </div>
-            <p class="card-desc">
-              Explorations into directed acyclic graph representations of Sinographs, phonetic consistency metrics across Middle Chinese rimes, and neural character embeddings.
-            </p>
-            <div class="card-tags">
-              <span class="tag">Research</span>
-              <span class="tag">DAG</span>
-              <span class="tag">Phonology</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>© 2026 tiduloop. Hosted independently on GitHub Pages.</p>
+    <footer class="footer">
+      <a href="https://github.com/tiduloop" target="_blank" rel="noopener noreferrer">github.com/tiduloop</a>
+      <span class="sep">/</span>
+      <a href="./hanzi-topology/">hanzi-topology</a>
     </footer>
   </div>
-
-  <script src="app.js"></script>
 </body>
 </html>
