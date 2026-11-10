@@ -1,0 +1,37 @@
+Hi everyone,
+
+While learning Chinese, I often found myself confused by characters that look quite similar and wondering why they share components that are not obviously related.
+
+So I built a free, interactive tool to *see* the [structural connections between Chinese characters](https://tiduloop.github.io/hanzi-topology/).
+
+Here are a few interesting views you can explore:
+
+### 1. Lookalike & Component Contrast (Compare Mode)
+- **[谁 vs 准](https://tiduloop.github.io/hanzi-topology/?char=谁&mode=compare&target=准)**: Side-by-side comparison showing how both are built around `隹`, branching into speech (`讠` → `谁`) versus water/ice standard (`冫` → `准`).
+- **[实 vs 买](https://tiduloop.github.io/hanzi-topology/?char=实&mode=compare&target=买)**: Both feature `头`, but `买` derives directly from `乛` + `头`, while `实` houses `头` under the roof radical `宀`. 
+
+### 2. Component Build-Up
+- **[青 Family Tree](https://tiduloop.github.io/hanzi-topology/?char=青&mode=buildup)**: Network originating from `青` — expanding to water (`清`), sun (`晴`), speech (`请`), heart/emotion (`情`), and eye (`睛`).
+- **[可 Build-Up](https://tiduloop.github.io/hanzi-topology/?char=可&mode=buildup)**: Structural anatomy starting from `丁` and `口`, expanding into `何`, `河`, `哥`, `奇`, etc.
+
+### 3. Parallel Transformation Ladders (How Radicals Act Systematically)
+Instead of looking at one character in isolation, you can click any edge to see how that radical acts in parallel across dozens of other characters:
+- **[+氵 (Water) Transformation Ladder](https://tiduloop.github.io/hanzi-topology/?char=青&edge=氵&ladder=true)**: See how adding water systematically transforms `青`→`清`, `工`→`江`, `木`→`沐`, `也`→`池`, `包`→`泡`, `争`→`净`.
+- **[+扌 (Hand / Action) Transformation Ladder](https://tiduloop.github.io/hanzi-topology/?char=白&edge=扌&ladder=true)**: See how adding hand transforms `白`→`拍`, `丁`→`打`, `巴`→`把`, `分`→`扮`.
+
+### 4. Radical Forms & Positional Allographs
+Many radicals change shape depending on where they sit (e.g. `水` becomes `氵` on the left or `氺` at the bottom):
+- **[水 (Water) & its Combining Forms](https://tiduloop.github.io/hanzi-topology/?char=水&mode=buildup)**: Cross-links root radicals to their combining variants like `氵` (三点水 in `清`) and `氺` (泰字底 in `泰`, `录`, `暴`).
+
+### 5. Word Compound Topology & Reversible Pairs
+- **[学 (Words)](https://tiduloop.github.io/hanzi-topology/?char=学&mode=words_buildup)**: Visualizes compound formation across 1st and 2nd hops (`学生`, `学校`, `大学`, `学习`, `科学`).
+- Toggle **⇄ Swaps & Reversals** on the graph to explore reversible word pairs (AB ⇄ BA) like **合适** (suitable) ⇄ **适合** (to suit), **刷牙** ⇄ **牙刷**, or **生产** ⇄ **产生**.
+
+### Extra features:
+- **Direct shareable URLs:** Every character breakdown, side-by-side comparison, and parallel radical ladder has its own link.
+- **Stroke animations & color anatomy:** Step-by-step stroke orders and color-coded sub-assemblies for every character and radical.
+- **Mobile-friendly & 100% Client-Side:** Collapsible inspector, fast static engine (no login, no ads, no trackers).
+
+**Link:** https://tiduloop.github.io/hanzi-topology/
+
+Hope this is helpful for anyone studying character components! Would love to hear your feedback or any edge cases you spot.
