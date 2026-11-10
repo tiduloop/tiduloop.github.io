@@ -1,0 +1,10 @@
+{
+  "name": "HanziCompare 汉字对比",
+  "short_name": "汉字对比",
+  "description": "Mandarin Character & Word Comparison, Component Topology & Vector Stroke Diff Engine",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#020617",
+  "theme_color": "#020617"
+}
