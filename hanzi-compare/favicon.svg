@@ -1,33 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <linearGradient id="hc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="hc-bg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="64">
       <stop offset="0%" stop-color="#0F172A"/>
       <stop offset="52%" stop-color="#172554"/>
       <stop offset="100%" stop-color="#1E1B4B"/>
     </linearGradient>
-    <linearGradient id="hc-rim" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="hc-rim" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="64">
       <stop offset="0%" stop-color="#38BDF8"/>
       <stop offset="50%" stop-color="#818CF8"/>
       <stop offset="100%" stop-color="#C084FC"/>
     </linearGradient>
-    <linearGradient id="hc-left" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="hc-left" gradientUnits="userSpaceOnUse" x1="13" y1="14" x2="30" y2="48">
       <stop offset="0%" stop-color="#7DD3FC"/>
       <stop offset="100%" stop-color="#0EA5E9"/>
     </linearGradient>
-    <linearGradient id="hc-right" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="hc-right" gradientUnits="userSpaceOnUse" x1="33" y1="14" x2="51" y2="49">
       <stop offset="0%" stop-color="#FDE68A"/>
       <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
   </defs>
   <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" fill="url(#hc-bg)" stroke="url(#hc-rim)" stroke-width="2.5"/>
-  <!-- Left radical of 比 (Sky Cyan) -->
-  <g fill="none" stroke="url(#hc-left)" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M 15.5 16 L 15.5 47 L 28 39.5"/>
-    <line x1="15.5" y1="29" x2="27" y2="29"/>
-  </g>
-  <!-- Right radical of 比 (Amber Gold) -->
-  <g fill="none" stroke="url(#hc-right)" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="48.5" y1="23" x2="35.5" y2="30.5"/>
-    <path d="M 35.5 15 L 35.5 43.5 A 4.5 4.5 0 0 0 40 48 L 45.5 48 A 3.5 3.5 0 0 0 49 44.5 L 49 39.5"/>
-  </g>
+  <!-- Left radical of 比 (Sky Cyan, all strokes in non-degenerate userSpaceOnUse path) -->
+  <path d="M 15.5 16 L 15.5 47 L 28 39.5 M 15.5 29 L 27 29" fill="none" stroke="url(#hc-left)" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right radical of 比 (Amber Gold, all strokes in non-degenerate userSpaceOnUse path) -->
+  <path d="M 48.5 23 L 35.5 30.5 M 35.5 15 L 35.5 43.5 A 4.5 4.5 0 0 0 40 48 L 45.5 48 A 3.5 3.5 0 0 0 49 44.5 L 49 39.5" fill="none" stroke="url(#hc-right)" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
