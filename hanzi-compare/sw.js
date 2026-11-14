@@ -1,8 +1,16 @@
 // HanziCompare Offline PWA & Auto-Update Service Worker
 // BUILD_STAMP is updated automatically by install.sh on every deployment so installed apps
 // detect and activate updates in the background without ever needing re-installation.
-const BUILD_STAMP = "af9773cddbb6";
-const CACHE_PREFIX = "hanzi-compare-";
+const BUILD_STAMP = "1569343a9f8e";
+const SCOPE_SLUG = (() => {
+  try {
+    const p = new URL(self.registration.scope).pathname.replace(/^\/+|\/+$/g, "");
+    return p ? p.replace(/[^a-zA-Z0-9_-]/g, "-") : "root";
+  } catch {
+    return "hanzi-compare";
+  }
+})();
+const CACHE_PREFIX = `${SCOPE_SLUG}-`;
 const CACHE_NAME = `${CACHE_PREFIX}${BUILD_STAMP}`;
 
 const CORE_SHELL_ASSETS = [
