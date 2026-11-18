@@ -1,7 +1,7 @@
 // HanziCompare Offline PWA & Auto-Update Service Worker
 // BUILD_STAMP is updated automatically by install.sh on every deployment so installed apps
 // detect and activate updates in the background without ever needing re-installation.
-const BUILD_STAMP = "b2c659c9025b";
+const BUILD_STAMP = "df734070ecae";
 const SCOPE_SLUG = (() => {
   try {
     const p = new URL(self.registration.scope).pathname.replace(/^\/+|\/+$/g, "");
