@@ -1,7 +1,7 @@
 // HanziCompare Offline PWA & Auto-Update Service Worker
 // BUILD_STAMP is updated automatically by install.sh on every deployment so installed apps
 // detect and activate updates in the background without ever needing re-installation.
-const BUILD_STAMP = "3dc7943698b9";
+const BUILD_STAMP = "c99cf1611f93";
 const SCOPE_SLUG = (() => {
   try {
     const p = new URL(self.registration.scope).pathname.replace(/^\/+|\/+$/g, "");
@@ -25,7 +25,7 @@ const CORE_SHELL_ASSETS = [
   "./static-data/home-bootstrap.json",
 ];
 
-const LAZY_CHUNK_ASSETS = ["./assets/GraphEdgeFocusDock-0JCiY59V.js", "./assets/GraphFiltersPopover-FF8bcsoZ.js", "./assets/GraphHelpPopover-C8OnmUDx.js", "./assets/TutorialOverlay-BsDMSk64.js", "./assets/VisualDiffModal-Cjj4nRgI.js", "./assets/index-DB9ZO9el.css", "./assets/index-DGarcWrC.js", "./assets/vendor-icons-BJi5YHQL.js", "./assets/vendor-react-BqH9RPIO.js"];
+const LAZY_CHUNK_ASSETS = ["./assets/GraphEdgeFocusDock-DKKRL8W4.js", "./assets/GraphFiltersPopover-BJdhvdvu.js", "./assets/GraphHelpPopover-BVNeIv89.js", "./assets/TutorialOverlay-BsDMSk64.js", "./assets/VisualDiffModal-CiKIzHE6.js", "./assets/index-DB9ZO9el.css", "./assets/index-T3F5UsR6.js", "./assets/vendor-icons-BJi5YHQL.js", "./assets/vendor-react-BqH9RPIO.js"];
 
 const BACKGROUND_DATA_ASSETS = [
   "./static-data/topology-chars.json",
