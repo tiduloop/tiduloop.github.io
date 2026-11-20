@@ -1,7 +1,7 @@
 // HanziCompare Offline PWA & Auto-Update Service Worker
 // BUILD_STAMP is updated automatically by install.sh on every deployment so installed apps
 // detect and activate updates in the background without ever needing re-installation.
-const BUILD_STAMP = "d48d56113ec3";
+const BUILD_STAMP = "3dc7943698b9";
 const SCOPE_SLUG = (() => {
   try {
     const p = new URL(self.registration.scope).pathname.replace(/^\/+|\/+$/g, "");
@@ -25,6 +25,8 @@ const CORE_SHELL_ASSETS = [
   "./static-data/home-bootstrap.json",
 ];
 
+const LAZY_CHUNK_ASSETS = ["./assets/GraphEdgeFocusDock-0JCiY59V.js", "./assets/GraphFiltersPopover-FF8bcsoZ.js", "./assets/GraphHelpPopover-C8OnmUDx.js", "./assets/TutorialOverlay-BsDMSk64.js", "./assets/VisualDiffModal-Cjj4nRgI.js", "./assets/index-DB9ZO9el.css", "./assets/index-DGarcWrC.js", "./assets/vendor-icons-BJi5YHQL.js", "./assets/vendor-react-BqH9RPIO.js"];
+
 const BACKGROUND_DATA_ASSETS = [
   "./static-data/topology-chars.json",
   "./static-data/topology-words-core.json",
@@ -46,6 +48,22 @@ async function warmOfflineDatasets() {
   if (shouldSaveData()) return;
   try {
     const cache = await caches.open(CACHE_NAME);
+    // 0. Warm code-split JS/CSS chunks in the background so modals/popovers work 100% offline
+    for (const rel of LAZY_CHUNK_ASSETS) {
+      const req = new Request(rel);
+      const existing = await cache.match(req);
+      if (!existing) {
+        try {
+          const res = await fetch(req);
+          if (res && res.ok) {
+            await cache.put(req, res);
+          }
+        } catch {
+          return;
+        }
+      }
+    }
+
     // 1. Warm core character & word topology files first
     for (const rel of BACKGROUND_DATA_ASSETS) {
       const req = new Request(rel, { cache: "reload" });
